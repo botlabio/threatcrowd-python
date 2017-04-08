@@ -1,5 +1,6 @@
 # threatcrowd-python
-A python wrapper for Thtreatcrowd API that returns all the outputs in pandas dataframes. 
+
+A python wrapper for Thtreatcrowd API that introduces a very easy access method for repeated use and returns all the outputs in pandas dataframes for network graph or other analysis. 
 
 ## 1. Getting Started 
 
@@ -32,3 +33,12 @@ There are four different modes; domain, ip, email, antivirus. The domain mode is
     
 ### 1.3 Access the data in the data object 
 
+For domain and ip objects there are more than 1 dataframes that come as the output: 
+
+    df = o.run()
+    df[1] # shows the second dataframe in the object       
+    
+For email and antivirus there is just one result dataframe: 
+
+    df = o.run()
+    df
